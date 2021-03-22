@@ -1,0 +1,87 @@
+
+meta
+{
+  title: "Валидатор зданий";
+  author: "Alexander Istomin https://www.openstreetmap.org/user/Alexander-II и Панкратов Александр Владимирович https://www.openstreetmap.org/user/Sowa1980";
+  version: "1.02_2019-05-18";
+  description: "Валидатор зданий";
+}
+
+/* Здание */
+
+area[building][!addr:housenumber]::tt
+{
+  text: eval("Адрес?");
+  text-color: red;
+  font-size: 12;
+  text-offset-y: 50;
+  text-position: center;
+  text-halo-radius: 3;
+  text-halo-color: white;
+}
+
+area[building=yes]::ttt
+{
+  text: eval("Тип здания?");
+  text-color: red;
+  font-size: 12;
+  text-offset-y: 35;
+  text-position: center;
+  text-halo-radius: 3;
+  text-halo-color: white;
+}
+
+area[building][!building:levels]::tttt
+{
+  text: eval("Этажность?");
+  text-color: red;
+  font-size: 12;
+  text-offset-y: 20;
+  text-position: center;
+  text-halo-radius: 3;
+  text-halo-color: white;
+}
+
+area[building][!roof:shape]::ttttt
+{
+  text: eval("Форма крыши?");
+  text-color: blue;
+  font-size: 12;
+  text-offset-y: 0;
+  text-position: center;
+  text-halo-radius: 3;
+  text-halo-color: white;
+}
+
+area[building][!building:material]::tttttt
+{
+  text: eval("Материал здания?");
+  text-color: green;
+  font-size: 12;
+  text-offset-y: -15;
+  text-position: center;
+  text-halo-radius: 3;
+  text-halo-color: white;
+}
+
+area[building][!roof:material]::ttttttt
+{
+  text: eval("Материал крыши?");
+  text-color: black;
+  font-size: 12;
+  text-offset-y: -30;
+  text-position: center;
+  text-halo-radius: 3;
+  text-halo-color: white;
+}
+
+area[building][!facade:material]::tttttttt
+{
+  text: eval("Материал фасада?");
+  text-color: Orange;
+  font-size: 12;
+  text-offset-y: -45;
+  text-position: center;
+  text-halo-radius: 3;
+  text-halo-color: white;
+}
