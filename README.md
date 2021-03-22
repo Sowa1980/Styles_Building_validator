@@ -1,7 +1,7 @@
 # Валидатор зданий
 Стиль для [JOSM](https://josm.openstreetmap.de/), служит для визуалиции тегов зданий и облегчения картирования в программе.
 
-![icon]()
+![icon](https://github.com/Sowa1980/Styles_Building_validator/blob/master/Styles_Building_validator.jpg)
 ### Языки локализации: 
 Русский.
 ### Установка
